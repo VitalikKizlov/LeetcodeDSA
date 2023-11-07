@@ -13,7 +13,24 @@ func checkIfPalindrome(_ string: String) -> Bool {
     return true
 }
 
-checkIfPalindrome("abcdcba")
+func checkIfPalindromeCount(_ string: String) -> Bool {
+    var left = 0
+    var right = string.count
+
+    while left < right {
+        let leftIndex = string.index(string.startIndex, offsetBy: left)
+        let rightIndex = string.index(string.startIndex, offsetBy: right - 1)
+
+        if string[leftIndex] != string[rightIndex] { return false }
+        left += 1
+        right -= 1
+    }
+
+    return true
+}
+
+print(checkIfPalindrome("abcdcba"))
+print(checkIfPalindromeCount("abcdcba"))
 
 func checkForTarget(_ array: [Int], target: Int) -> Bool {
     var left = 0
@@ -34,7 +51,7 @@ func checkForTarget(_ array: [Int], target: Int) -> Bool {
 
 let nums = [1, 2, 4, 6, 8, 9, 14, 15]
 let target = 13
-checkForTarget(nums, target: target)
+print(checkForTarget(nums, target: target))
 
 func mergeSortedArrays(_ firstArray: [Int], _ secondArray: [Int]) -> [Int] {
     var i = 0
@@ -71,3 +88,22 @@ let nums1 = [1, 3, 5, 7, 9, 11]
 let nums2 = [12, 14, 16, 18, 20]
 print(mergeSortedArrays(nums1, nums2))
 
+func isSubsequence(_ string1: String, _ string2: String) -> Bool {
+    var i = 0
+    var j = 0
+
+    while i < string1.count && j < string2.count {
+        let iIndex = string1.index(string1.startIndex, offsetBy: i)
+        let jIndex = string2.index(string2.startIndex, offsetBy: j)
+
+        if string1[iIndex] == string2[jIndex] {
+            i += 1
+        }
+
+        j += 1
+    }
+
+    return i == string1.count
+}
+
+print(isSubsequence("ace", "abcdef"))
