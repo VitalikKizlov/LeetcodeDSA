@@ -126,3 +126,31 @@ func reverseString(_ s: inout [Character]) {
 
 var s: [Character] = ["h","e","l","l","o"]
 print(reverseString(&s))
+
+func sortedSquares(_ nums: [Int]) -> [Int] {
+    var left = 0
+    var right = nums.count - 1
+    var index = nums.count - 1
+    var result: [Int] = Array(repeating: 0, count: nums.count)
+
+    while left <= right {
+        let first = nums[left] * nums[left]
+        let last = nums[right] * nums[right]
+
+        if first > last {
+            result[index] = first
+            left += 1
+        } else {
+            result[index] = last
+            right -= 1
+        }
+        
+        index -= 1
+        print(result)
+    }
+
+    return result
+}
+
+let sortedSquaresNums = [-4,-1,0,3,10]
+print(sortedSquares(sortedSquaresNums))
