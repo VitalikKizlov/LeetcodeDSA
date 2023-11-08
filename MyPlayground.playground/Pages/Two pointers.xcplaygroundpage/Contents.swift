@@ -107,3 +107,22 @@ func isSubsequence(_ string1: String, _ string2: String) -> Bool {
 }
 
 print(isSubsequence("ace", "abcdef"))
+
+func reverseString(_ s: inout [Character]) {
+    var left = 0
+    var right = s.count - 1
+
+    while left < right {
+        let first = s[left]
+        let last = s[right]
+
+        s[left] = last
+        s[right] = first
+
+        left += 1
+        right -= 1
+    }
+}
+
+var s: [Character] = ["h","e","l","l","o"]
+print(reverseString(&s))
