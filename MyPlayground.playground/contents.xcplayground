@@ -3,6 +3,8 @@
     <pages>
         <page name='Two pointers'/>
         <page name='Sliding Window'/>
+        <page name='Minimum Value to Get Positive Step by Step Sum'/>
         <page name='Prefix sum'/>
+        <page name='K Radius Subarray Averages'/>
     </pages>
 </playground>
