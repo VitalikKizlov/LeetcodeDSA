@@ -157,3 +157,6 @@ print(sortedSquares(sortedSquaresNums))
 
 let reverseWordsString = "Let's take LeetCode contest"
 print(reverseWords(reverseWordsString))
+
+let reverseOnlyLettersString = "ab-cd"
+print(reverseOnlyLetters(reverseOnlyLettersString))

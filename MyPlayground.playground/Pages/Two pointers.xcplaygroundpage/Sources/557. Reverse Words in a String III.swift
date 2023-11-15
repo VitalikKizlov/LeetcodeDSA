@@ -19,7 +19,6 @@ public func reverseWords(_ s: String) -> String {
     var result: [String] = []
 
     for word in words {
-
         var left = 0
         var right = word.count - 1
         var str = ""
@@ -32,7 +31,7 @@ public func reverseWords(_ s: String) -> String {
             left += 1
             right -= 1
 
-            if left == word.count { // end of the word
+            if left == word.count {
                 result.append(str)
             }
         }
