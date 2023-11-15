@@ -154,3 +154,6 @@ func sortedSquares(_ nums: [Int]) -> [Int] {
 
 let sortedSquaresNums = [-4,-1,0,3,10]
 print(sortedSquares(sortedSquaresNums))
+
+let reverseWordsString = "Let's take LeetCode contest"
+print(reverseWords(reverseWordsString))
