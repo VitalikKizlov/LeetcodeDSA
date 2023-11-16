@@ -160,3 +160,6 @@ print(reverseWords(reverseWordsString))
 
 let reverseOnlyLettersString = "ab-cd"
 print(reverseOnlyLetters(reverseOnlyLettersString))
+
+var moveZeroesNums = [0,1,0,3,12]
+print(moveZeroes(&moveZeroesNums))
