@@ -163,3 +163,5 @@ print(reverseOnlyLetters(reverseOnlyLettersString))
 
 var moveZeroesNums = [0,1,0,3,12]
 print(moveZeroes(&moveZeroesNums))
+
+print(reversePrefix("xyxzxe", "z"))
