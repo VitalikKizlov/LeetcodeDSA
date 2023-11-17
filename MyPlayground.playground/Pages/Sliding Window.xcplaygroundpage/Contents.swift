@@ -152,4 +152,6 @@ func maxConsecutive(_ nums: [Int], _ k: Int) -> Int {
 let maxConsecutiveNums = [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0]
 let maxConsecutiveK = 2
 print(maxConsecutive(maxConsecutiveNums, maxConsecutiveK))
+
+print(minSubArrayLenght([2,3,1,2,4,3], target: 7))
 //: [Next](@next)
